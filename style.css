@@ -1,0 +1,508 @@
+```css
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #fffaf5;
+    color: #263238;
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+}
+
+section {
+    padding: 100px 8%;
+}
+
+.small-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background: rgba(255, 250, 245, 0.85);
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo span {
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #263238;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        180deg,
+        #f8d9b5,
+        #fce9d1,
+        #fffaf5
+    );
+}
+
+.hero-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 1;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    display: block;
+    font-style: italic;
+}
+
+.hero-text {
+    max-width: 550px;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+button {
+    border: none;
+    background: #263238;
+    color: white;
+
+    padding: 15px 28px;
+
+    border-radius: 50px;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+}
+
+
+/* Decorative sun */
+
+.sun {
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: #f5b85b;
+
+    right: 12%;
+    top: 22%;
+
+    box-shadow:
+        0 0 80px rgba(245, 184, 91, 0.5);
+}
+
+.cloud {
+    position: absolute;
+
+    width: 150px;
+    height: 50px;
+
+    background: rgba(255,255,255,0.5);
+
+    border-radius: 50px;
+}
+
+.cloud-one {
+    right: 8%;
+    top: 60%;
+}
+
+.cloud-two {
+    left: 8%;
+    top: 25%;
+
+    transform: scale(0.7);
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.intro > p:last-child {
+    max-width: 600px;
+    margin: auto;
+    font-size: 17px;
+}
+
+
+/* =========================
+   DAY SECTION
+========================= */
+
+.day-section {
+    background: #f4eee7;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-size: clamp(40px, 5vw, 65px);
+}
+
+
+/* Timeline */
+
+.timeline {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.day-card {
+    background: #fffaf5;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    min-height: 300px;
+
+    transition: 0.3s;
+}
+
+.day-card:hover {
+    transform: translateY(-10px);
+}
+
+.time {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    opacity: 0.55;
+
+    margin-bottom: 25px;
+}
+
+.icon {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.day-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section {
+    background: #263238;
+    color: white;
+
+    text-align: center;
+}
+
+.quote {
+    max-width: 800px;
+    margin: auto;
+}
+
+.quote > span {
+    font-family: Georgia, serif;
+    font-size: 100px;
+    line-height: 0;
+}
+
+.quote h2 {
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1.15;
+
+    margin: 30px 0;
+}
+
+.quote p {
+    opacity: 0.7;
+}
+
+
+/* =========================
+   MOMENTS
+========================= */
+
+.moment-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.moment {
+    padding: 35px;
+
+    border: 1px solid #e8ded4;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.moment:hover {
+    transform: translateY(-7px);
+}
+
+.moment span {
+    font-size: 35px;
+}
+
+.moment h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+
+    margin: 10px 0 5px;
+}
+
+
+/* =========================
+   INTERACTIVE
+========================= */
+
+.interactive {
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #fce1c4,
+        #f8d4d0
+    );
+}
+
+.interactive h2 {
+    max-width: 800px;
+    margin: 0 auto 30px;
+
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.1;
+}
+
+.interactive h2 span {
+    font-style: italic;
+}
+
+#message {
+    margin-top: 25px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    min-height: 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: #fffaf5;
+}
+
+footer p {
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+footer .copyright {
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.sun {
+    animation: float 5s ease-in-out infinite;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .moment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sun {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 80px 6%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .sun {
+        width: 150px;
+        height: 150px;
+
+        right: -30px;
+        top: 20%;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .moment-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+```
